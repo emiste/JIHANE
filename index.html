@@ -42,7 +42,19 @@
         <p class="challenge" id="challengeText">Clique sur “Démarrer la mission”</p>
         <div class="answer">
           <label for="answerInput">Ta réponse</label>
-          <input id="answerInput" type="number" inputmode="numeric" placeholder="Ex: 42" />
+          <div class="answer__field">
+            <input
+              id="answerInput"
+              type="text"
+              inputmode="numeric"
+              placeholder="Écris ici avec le stylet"
+              aria-describedby="answerHint"
+              autocomplete="off"
+            />
+            <p class="answer__hint" id="answerHint">
+              Utilise ton stylet : l’iPad transforme ton écriture en chiffres.
+            </p>
+          </div>
           <button id="checkAnswer" class="primary">Valider</button>
         </div>
         <p id="feedback" class="feedback"></p>

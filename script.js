@@ -79,8 +79,9 @@ function handleAnswer() {
     return;
   }
 
-  const answer = Number(answerInput.value);
-  if (!answerInput.value) {
+  const sanitizedAnswer = answerInput.value.replace(/[^\d-]/g, "");
+  const answer = Number(sanitizedAnswer);
+  if (!sanitizedAnswer) {
     feedbackMessage("Entre une réponse pour continuer.", "warning");
     return;
   }
