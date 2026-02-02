@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mission Astro-Multiplications</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="badge">Jeu pour 9 ans</p>
+        <h1>Mission Astro-Multiplications</h1>
+        <p class="subtitle">
+          Une aventure ludique pour réviser les tables de 2 à 9 avec des défis, des
+          bonus et des étoiles.
+        </p>
+        <div class="hero__actions">
+          <button id="startMission" class="primary">Démarrer la mission</button>
+          <button id="newChallenge" class="secondary">Nouveau défi</button>
+        </div>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__label">Boucliers</span>
+          <span id="shields" class="stat__value">3</span>
+        </div>
+        <div class="stat">
+          <span class="stat__label">Étoiles</span>
+          <span id="stars" class="stat__value">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat__label">Progression</span>
+          <span id="progress" class="stat__value">0 / 30</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="card" id="challengeCard">
+        <h2>Défi du vaisseau</h2>
+        <p class="challenge" id="challengeText">Clique sur “Démarrer la mission”</p>
+        <div class="answer">
+          <label for="answerInput">Ta réponse</label>
+          <input id="answerInput" type="number" inputmode="numeric" placeholder="Ex: 42" />
+          <button id="checkAnswer" class="primary">Valider</button>
+        </div>
+        <p id="feedback" class="feedback"></p>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h3>Comment jouer</h3>
+          <ol>
+            <li>Choisis un défi de multiplication entre 2 et 9.</li>
+            <li>Résous l’opération pour gagner des cases.</li>
+            <li>Chaque bonne réponse rapporte des étoiles et de la progression.</li>
+            <li>Trois erreurs et la mission redémarre.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Bonus spatiaux</h3>
+          <ul>
+            <li>Turbo : +3 cases</li>
+            <li>Bouclier : récupère 1 bouclier</li>
+            <li>Table magique : choisis ta table</li>
+            <li>Pause : souffle avant le prochain défi</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card tips">
+        <h3>Astuce pour apprendre plus vite</h3>
+        <p>
+          Quand tu te trompes, écris l’opération correcte trois fois. Cela aide le
+          cerveau à retenir le bon résultat.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Mission Astro-Multiplications · Entraînement ludique des tables 2 à 9</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
